@@ -28,12 +28,12 @@ public class Main {
         for (Map.Entry<String, Integer> em : resultMap.entrySet()) {
             System.out.println(em.getKey());
         }
-        System.out.println("");//для читабельности
+        System.out.println("");
 
         for (Map.Entry<String, Integer> em : resultMap.entrySet()) {
             System.out.println("Cлово \"" + em.getKey() + "\" встречается " + em.getValue() + " раз(а).");
         }
-        System.out.println("");//для читабельности
+        System.out.println("");
 
         System.out.println("Наибольшее колчество раз встречается:");
         for (Map.Entry<String, Integer> em : resultMap.entrySet()) {
