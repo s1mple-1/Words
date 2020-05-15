@@ -21,9 +21,9 @@ public class Main {
                 System.out.println("Файл не найден. Убедитесь, что файл находится в корнейвой деректории программы или укажите полный путь к файлу.");
             }
         }
+        fileNameReader.close();
 
         TreeMap<String, Integer> resultMap = countUniqueWords(listWords);
-
 
         for (Map.Entry<String, Integer> em : resultMap.entrySet()) {
             System.out.println(em.getKey());
@@ -40,10 +40,8 @@ public class Main {
             if (em.getValue() == findMaxValue(resultMap)) {
                 System.out.println("Cлово \"" + em.getKey() + "\" - " + em.getValue() + " раз(а).");
             }
-
         }
     }
-
 
     private static TreeMap<String, Integer> countUniqueWords(ArrayList<String> listWords) {
         TreeMap<String, Integer> resultMap = new TreeMap<>();
@@ -54,7 +52,7 @@ public class Main {
                     count++;
                 }
             }
-            if(!s1.isEmpty()) {
+            if (!s1.isEmpty()) {
                 resultMap.put(s1.toLowerCase(), count);
             }
         }
