@@ -65,7 +65,7 @@ public class Main {
         ArrayList<String> wordsList = new ArrayList<>();
         while (fileReader.ready()) {
             String[] arr;
-            arr = fileReader.readLine().split("[\\s\\p{P}]");
+            arr = fileReader.readLine().split("[\\t\\n\\s\\p{Punct}]");
             wordsList.addAll(Arrays.asList(arr));
         }
         return wordsList;
